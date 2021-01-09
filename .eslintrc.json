@@ -14,7 +14,7 @@
   "plugins": ["react", "prettier"],
   "rules": {
     "prettier/prettier": "error",
-    
+
     // for React v17
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off"
