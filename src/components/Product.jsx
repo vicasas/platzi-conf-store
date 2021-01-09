@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-const Product = ({ product }) => (
+const Product = ({ product, addToCart }) => (
   <div className='Products-item'>
     <img src={product.image} alt={product.title} />
     <div className='Product-item-info'>
@@ -10,7 +10,9 @@ const Product = ({ product }) => (
       </h2>
       <p>{product.description}</p>
     </div>
-    <button type='button'>Comprar</button>
+    <button type='button' onClick={addToCart(product)}>
+      Comprar
+    </button>
   </div>
 )
 
@@ -22,6 +24,7 @@ Product.propTypes = {
     price: PropTypes.number.isRequired,
     description: PropTypes.string.isRequired,
   }).isRequired,
+  addToCart: PropTypes.func.isRequired,
 }
 
 export default Product
